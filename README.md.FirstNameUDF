@@ -1,0 +1,10 @@
+#if($lead.FirstName =="")
+#set($greeting ="?")
+#elseif($lead.FirstName.contains("."))
+#set($greeting = "?")
+#elseif($lead.FirstName.contains("&"))
+#set($greeting = "?")
+#else
+#set($greeting = " $lead.FirstName?")
+#end
+${greeting}
