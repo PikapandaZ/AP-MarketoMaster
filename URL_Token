@@ -1,0 +1,15 @@
+#set ($hasCustomObject = "false")
+#foreach ($userDefined in $userDefinedFields_cList)
+#if ($userDefined.fieldsetName == "AP_FY23_APGD_HuskyGivingDay_030723a")
+	#set ($Area=$userDefined.userString01)
+	#set ($hasCustomObject="true")
+	#end
+#end
+#if ($hasCustomObject == "true")
+#set ($Area=$userDefined.userString01)
+${Area}##
+#end
+#if ($hasCustomObject == "false")
+#set ($default="https://www.washington.edu/giving/renew-your-support/?utm_source=FY23lapsedSA030723")
+${default}##
+#end
