@@ -1,0 +1,5 @@
+#set($greeting = "$lead.FirstName, you")
+#if($lead.FirstName.isEmpty() || $lead.FirstName.contains(".") || $lead.FirstName.contains("-"))
+#set($greeting = "You")
+#end
+${greeting}
