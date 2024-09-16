@@ -1,0 +1,5 @@
+#set($greeting = ${lead.defaultSalutation})
+#if($lead.defaultSalutation.isEmpty() || $lead.defaultSalutation.contains(".") ||$lead.defaultSalutation.contains("'") || $lead.defaultSalutation.contains("-"))
+#set($greeting = "Husky Family")
+#end
+${greeting}
