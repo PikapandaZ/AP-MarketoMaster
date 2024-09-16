@@ -1,0 +1,15 @@
+#set ($hasCustomObject = "false")
+#foreach ($userDefined in $userDefinedFields_cList)
+#if ($userDefined.fieldsetName == "AP_FY23_APQ1D_Q1 Renewals_080923")
+#set ($Area=$userDefined.userString02)
+#set ($hasCustomObject="true")
+#end
+#end
+#if ($hasCustomObject == "true")
+#set ($Area=$userDefined.userString02)
+$Area##
+#end
+#if ($hasCustomObject == "false")
+#set ($Defaultarea="the University of Washington")
+$Defaultarea##
+#end
