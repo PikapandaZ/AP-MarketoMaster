@@ -1,0 +1,15 @@
+#set ($hasCustomObject = "false")
+#foreach ($userDefined in $userDefinedFields_cList)
+#if ($userDefined.fieldsetName == "AP-FY25-Q1-RenewalEmail1v1")
+	#set ($Area=$userDefined.userString01)
+	#set ($hasCustomObject="true")
+	#end
+#end
+#if ($hasCustomObject == "true")
+#set ($Area=$userDefined.userString01)
+${Area}##
+#end
+#if ($hasCustomObject == "false")
+#set ($default="https://www.washington.edu/giving/renew-your-support/?utm_source=deafult&utm_medium=RenewalEmail2&utm_campaign=FY25Q1&AP=true&appeal=APL-21544")
+${default}##
+#end
